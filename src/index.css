@@ -1,0 +1,20 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+:root{
+  --bg-color: #f0f0f0;
+  --primary: #8fbc8f;
+  --text: #1a2133;
+  --black: #777777;
+  --light-text: #778796;
+  --main: #ffffff;
+  --secondary: #f0f0f0;
+  --light-sec: #fafafa;
+  --font-one: "Montserrat", sans-serif;
+  --font-two: "Inter", sans-serif;
+
+}

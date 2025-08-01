@@ -1,0 +1,133 @@
+.filter{
+  width: 75%;
+  background-color: var(--main);
+  padding: 2% 2%;
+  border-radius: 10px;
+  box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.15);
+}
+.filter h1{
+  color: var(--text);
+  font-family: var(--font-two);
+  text-transform: capitalize;
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin: 0px 0px 20px 0px;
+}
+.filterCon{
+  width: 100%;
+}
+.filterForm{
+  display: flex;
+  align-items: flex-end;
+  gap: 20px;
+}
+.filterBox{
+  flex: 1;
+  background-color: var(--main);
+}
+.filterBox label{
+  display: block;
+  font-size: 0.9rem;
+  color: var(--text);
+  font-weight: 500;
+  text-transform: capitalize;
+  font-family: var(--font-two);
+  margin: 0px 0px 10px 0px;
+}
+.filterBox .location{
+  width: 100%;
+  padding: 12px 15px;
+  border-radius: 6px;
+  background-color: var(--bg-color);
+  border: none;
+  font-size: 0.9rem;
+  color: var(--light-text);
+  font-family: var(--font-two);
+  outline: none;
+  border: 1.5px solid var(--main);
+}
+
+.location::placeholder{
+  font-family: var(--font-two);
+  font-size: 0.85rem;
+  color: var(--light-text);
+}
+
+.selectDiv{
+  width: 100%;
+  position: relative;
+}
+.filterBox .TypeBtn{
+  width: 100%;
+  background-color: var(--bg-color);
+  border: none;
+  font-size: 0.9rem;
+  padding: 12px 15px;
+  border-radius: 6px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: var(--text);
+  font-family: var(--font-two);
+  color: var(--light-text);
+  text-transform: capitalize;
+  cursor: pointer;
+  border: 1.5px solid var(--main);
+}
+.location:focus, .TypeBtn:focus{
+  border: 1.5px solid var(--light-text);
+}
+.selectOptionCon{
+  width: 100%;
+  position: absolute;
+  top: 110%;
+  left: 0;
+  background-color: var(--main);
+  z-index: 99;
+  padding: 5px;
+  list-style: none;
+  border-radius: 10px;
+  box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.15);
+}
+.selectOptionCon li{
+  margin: 0px 0px 5px 0px;
+  padding: 6px 10px;
+  border-radius: 5px;
+  color: var(--main);
+  font-family: var(--font-two);
+  font-size: 0.85rem;
+  font-weight: 500;
+  color: var(--text);
+  text-transform: capitalize;
+  cursor: pointer;
+}
+.selectOptionCon li:hover{
+  background-color: var(--primary);
+  color: var(--main);
+}
+.filterBox .range{
+  width: 100%;
+  accent-color: #007b5e;
+  border: none;
+}
+.price{
+  color: var(--light-text);
+  font-family: var(--font-two);
+  font-weight: 500;
+  font-size: 0.8rem;
+}
+.filterForm .searchBtn{
+  background: var(--primary);
+  color: var(--main);
+  font-family: var(--font-two);
+  font-size: 0.9rem;
+  font-weight: 600;
+  text-transform: capitalize;
+  border: none;
+  padding: 10px 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  border-radius: 5px;
+}

@@ -1,0 +1,34 @@
+.footer{
+  width: 100%;
+  padding: 2% 3%;
+  background-color: var(--main);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.footer p{
+  font-size: 0.9rem;
+  color: var(--light-text);
+  font-family: var(--font-two);
+  font-weight: 400;
+}
+.footer > div{
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.footer > div .ruleLink{
+  text-decoration: none;
+  text-transform: capitalize;
+  color: var(--black);
+  font-family: var(--font-two);
+  font-weight: 400;
+  font-size: 0.85rem;
+  cursor: pointer;
+  transition: color 0.2s ease-in-out;
+}
+.footer > div .ruleLink:hover{
+  color: var(---text);
+  transition: color 0.2s ease-in-out;
+}
