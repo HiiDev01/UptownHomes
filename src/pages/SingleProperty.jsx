@@ -21,7 +21,7 @@ const SingleProperty = () => {
       try {
         const res = await fetch(`http://localhost:4000/properties/${encodeURIComponent(id)}`, { signal: controller.signal })
         if(!res.ok){ 
-          if (res.status === 404) throw new Error('Property not found')
+          /*if (res.status === 404) throw new Error('Property not found');*/
           throw new Error('can not fetch the endpoint');
         };
         const data = await res.json()
@@ -29,7 +29,7 @@ const SingleProperty = () => {
         setError(null);
       } catch (error) {
         if(error.name === 'AbortError'){
-          return;
+          console.log('fetch aborted')
         }
         console.log(error);
         setError('error fetching single properties')
