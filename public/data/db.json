@@ -1,0 +1,74 @@
+{
+  "properties": [
+    {
+      "id": "1",
+      "title": "Fully Detached Duplex",
+      "price_naira": "₦1,425,000,000",
+      "price_usd": "$950,000",
+      "location": "Victoria Island, Lagos",
+      "beds": 5,
+      "baths": 5,
+      "size": "3,200 sqft",
+      "type": "For Sale",
+      "land_size": null,
+      "images": ["/px1.jpg", "/px1-2.jpg"],
+      "tags": []
+    },
+    {
+      "id": "2",
+      "title": "Modern Terrace House",
+      "price_naira": "₦975,000,000",
+      "price_usd": "$650,000",
+      "location": "Lekki Scheme II, Lagos",
+      "beds": 3,
+      "baths": 4,
+      "size": "2,100 sqft",
+      "type": "For Sale",
+      "land_size": null,
+      "images": ["/px2.jpg", "/px2-2.jpg"],
+      "tags": []
+    },
+    {
+      "id": "3",
+      "title": "Modern Terrace House",
+      "price_naira": "₦975,000,000",
+      "price_usd": "$650,000",
+      "location": "Lekki Scheme II, Lagos",
+      "beds": 3,
+      "baths": 4,
+      "size": "2,100 sqft",
+      "type": "For Sale",
+      "land_size": null,
+      "images": ["/px2.jpg"],
+      "tags": []
+    },
+    {
+      "id": "4",
+      "title": "Residential Plot in Ikoyi",
+      "price_naira": "₦2,250,000,000",
+      "price_usd": "$1,500,000",
+      "location": "Ikoyi, Lagos",
+      "beds": null,
+      "baths": null,
+      "size": null,
+      "type": "Land",
+      "land_size": "1.5 Acres",
+      "images": ["/px3.jpg"],
+      "tags": []
+    },
+    {
+      "id": "5",
+      "title": "Residential Plot in Ikoyi",
+      "price_naira": "₦2,250,000,000",
+      "price_usd": "$1,500,000",
+      "location": "Ikoyi, Lagos",
+      "beds": null,
+      "baths": null,
+      "size": null,
+      "type": "Land",
+      "land_size": "1.5 Acres",
+      "images": ["/px3.jpg"],
+      "tags": []
+    }
+  ]
+}
