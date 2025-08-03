@@ -12,7 +12,8 @@
       "type": "For Sale",
       "land_size": null,
       "images": ["/px1.jpg", "/px1-2.jpg"],
-      "tags": []
+      "tags": [],
+      "PropertyType": "House"
     },
     {
       "id": "2",
@@ -26,7 +27,8 @@
       "type": "For Sale",
       "land_size": null,
       "images": ["/px2.jpg", "/px2-2.jpg"],
-      "tags": []
+      "tags": [],
+      "propertyType": "House"
     },
     {
       "id": "3",
@@ -40,7 +42,8 @@
       "type": "For Sale",
       "land_size": null,
       "images": ["/px2.jpg"],
-      "tags": []
+      "tags": [],
+      "PropertyType": "House"
     },
     {
       "id": "4",
@@ -54,7 +57,8 @@
       "type": "Land",
       "land_size": "1.5 Acres",
       "images": ["/px3.jpg"],
-      "tags": []
+      "tags": [],      
+      "PropertyType": "Land"
     },
     {
       "id": "5",
@@ -68,7 +72,8 @@
       "type": "Land",
       "land_size": "1.5 Acres",
       "images": ["/px3.jpg"],
-      "tags": []
+      "tags": [],
+      "PropertyType": "Land"
     }
   ]
 }

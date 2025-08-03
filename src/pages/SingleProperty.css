@@ -1,0 +1,74 @@
+.singleProperty{
+  width: 100%;
+}
+.allCon{
+  width: 100%;
+  padding: 2%;
+  border: 2px solid red;
+  display: flex;
+  align-items: flex-start;
+  gap: 20px;
+}
+.wrapMainOne{
+  flex: 1;
+  border: 2px solid black;
+  min-height: 100px;
+}
+.wrapOne{
+  margin: 0px 0px 30px 0px;
+}
+.carousel{
+  border: 2px solid red;
+  position: relative;
+}
+.carousel-inner{
+  width: 100%;
+  height: 450px;
+}
+.carousel-inner img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.controls{
+  width: 100%;
+  display: flex;
+  align-content: center;
+  justify-content: space-between;
+  position: absolute;
+  padding: 0px 10px;
+  left: 0;
+  top: 45%;
+}
+.controls button{
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--light-text);
+}
+.thumbnails{
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.wrapTwo{
+  width: 100%;
+  border: 1px solid black;
+  padding: 20px;
+}
+
+
+
+
+.wrapMainTwo{
+  width: 30%;
+  border: 2px solid black;
+  min-height: 100px;
+}
+.cardDet{
+  padding: 20px;
+}

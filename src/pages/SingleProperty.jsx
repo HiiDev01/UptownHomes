@@ -4,13 +4,20 @@ import { IoMdArrowRoundForward } from "react-icons/io";
 import { IoBedOutline } from "react-icons/io5";
 import { LuBath } from "react-icons/lu";
 import { CiLocationOn } from "react-icons/ci";
+import { FaArrowRight } from "react-icons/fa";
+import { FaArrowLeft } from "react-icons/fa";
 import { CgNotes } from "react-icons/cg";
+import Nav from '../components/Nav';
+import '../pages/SingleProperty.css'
+
+
 
 const SingleProperty = () => {
-  const { id } = useParams()
+  const { type, id } = useParams()
   const [item, setItem] = useState(null);
   const [error, setError] = useState(null);
   const [loading, setLoading] = useState(false)
+  const [currentIdx, setCurrentIdx] = useState(0)
   const navigate = useNavigate()
 
   useEffect(()=>{
@@ -23,9 +30,12 @@ const SingleProperty = () => {
         if(!res.ok){ 
           /*if (res.status === 404) throw new Error('Property not found');*/
           throw new Error('can not fetch the endpoint');
-        };
+        }
         const data = await res.json()
         setItem(data);
+        if(type && data.type && data.type.toLowerCase !==type.toLowerCase()){
+            console.warn('URL type does not match fetched property type')
+        }
         setError(null);
       } catch (error) {
         if(error.name === 'AbortError'){
@@ -41,11 +51,21 @@ const SingleProperty = () => {
     return () =>{
       controller.abort();
     }
-  },[id])
+  },[type, id]);
+
+  const images = item?.images || [];
+
+  const prev = () => {
+    setCurrentIdx((i) => (i === 0 ? images.length - 1 : i - 1))
+  }
+  const next = () => {
+    setCurrentIdx((i) => (i === images.length - 1 ? 0 : i + 1))
+  }
 
   return (
     <div className='singleProperty'>
-            {loading && <div className="status">Loading property...</div>}
+      <Nav/>
+      {loading && <div className="status">Loading property...</div>}
 
       {error && (
         <div className="status error">
@@ -55,61 +75,70 @@ const SingleProperty = () => {
       )}
 
       {!loading && !error && item && (
-        <div className="propertyWrapper">
-          <div className="imageSection">
-            {item?.images?.length > 0 ? (
-              <img
-                src={item.images[0]}
-                alt={item.title || 'Property'}
-                className="mainImage"
-              />
-            ) : (
-              <div className="imagePlaceholder">No image available</div>
-            )}
-            <p className="property_type">{item.type}</p>
-          </div>
-
-          <div className="detailsSection">
-            <div className="titleRow">
-              <h1>{item.title || 'Untitled Property'}</h1>
-              <div className="priceGroup">
-                <span className="price_naira">{item.price_naira}</span>
-                <span className="price_usd">{item.price_usd}</span>
+        <div className='allCon'>
+          <div className='wrapMainOne'>
+            <div className="wrapOne">
+              <div className="carousel">
+                {images.length > 0 ? (
+                  <>
+                    <div className="carousel-inner">
+                      <img
+                        src={images[currentIdx]}
+                        alt={`Slide ${currentIdx + 1}`}
+                      />
+                    </div>
+                    {images.length > 1 && (
+                      <div className="controls">
+                        <button onClick={prev} aria-label="Previous image" >
+                          <FaArrowLeft size={16}/>
+                        </button>
+                        <span>
+                          {currentIdx + 1} / {images.length}
+                        </span>
+                        <button onClick={next} aria-label="Next image">
+                          <FaArrowRight size={16}/>
+                        </button>
+                      </div>
+                    )}
+                    <div className="thumbnails">
+                      {images.map((src, idx) => (
+                        <img
+                          key={idx}
+                          src={src}
+                          alt={`Thumb ${idx + 1}`}
+                          onClick={() => setCurrentIdx(idx)}
+                          style={{
+                            width: 100,
+                            height: 40,
+                            objectFit: 'cover',
+                            marginRight: 4,
+                            border: idx === currentIdx ? '2px solid blue' : '1px solid #ccc',
+                            cursor: 'pointer',
+                          }}
+                        />
+                      ))}
+                    </div>
+                  </>
+                ) : (
+                  <div className="imagePlaceholder">No images available</div>
+                )}
               </div>
             </div>
-
-            <p className="locationP">
-              <CiLocationOn size={20} className="icon" /> {item.location}
-            </p>
-
-            <div className="stats">
-              <div className="stat">
-                <IoBedOutline size={20} className="icon" />{' '}
-                {item.beds != null ? item.beds : '—'} beds
-              </div>
-              <div className="stat">
-                <LuBath size={20} className="icon" />{' '}
-                {item.baths != null ? item.baths : '—'} baths
-              </div>
-              <div className="stat">
-                <CgNotes size={20} className="icon" />{' '}
-                {item.land_size || item.size || '—'} sqft
-              </div>
-            </div>
-
-            <div className="description">
+            <div className="wrapTwo">
               <h2>Description</h2>
-              <p>{item.description || 'No description provided.'}</p>
+              <p>{item.title}</p>
             </div>
-
-            {/* Example action buttons */}
-            <div className="actions">
-              <button className="contactBtn">Contact Agent</button>
-              <button className="shareBtn">Share</button>
+          </div>
+          <div className='wrapMainTwo'>
+            <div className="cardDet">
+              <h2>{item.title}</h2>
+              <h4>{item.price_naira}</h4>
+              <p>{item.price_usd}</p>
+              if()
             </div>
           </div>
         </div>
-      )}
+      )} 
     </div>
   )
 }

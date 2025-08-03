@@ -12,9 +12,9 @@ function App() {
     <>
       <BrowserRouter>
         <Routes>
-          <Route exact path='/' element={<Home/>}/>
-          <Route exact path='/property' element={<HouseProperty/>}/>
-          <Route exact path='/property/:id' element={<SingleProperty/>}/>
+          <Route exact path="/" element={<Home/>}/>
+          <Route exact path="/property/house" element={<HouseProperty/>}/>
+          <Route exact path="/property/:id" element={<SingleProperty/>}/>
         </Routes>
       </BrowserRouter>
     </>

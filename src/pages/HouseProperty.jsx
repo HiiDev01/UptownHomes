@@ -16,7 +16,7 @@ const HouseProperty = () => {
  useEffect(()=>{
   const fetchProperties = async()=>{
     try {
-      const res = await fetch('http://localhost:4000/properties')
+      const res = await fetch(`http://localhost:4000/properties?type=${encodeURIComponent('For Sale')}`)
       if(!res.ok){throw new Error('can not fetch the endpoint')}
       const data = await res.json()
       setProperties(data);
@@ -44,8 +44,9 @@ const HouseProperty = () => {
         <div className='propertCon'>
           {error &&<p>{error}</p>}
             {properties.map((items)=>(
-                <div className='propertyCard' >
-                  <Link to={`/property/${items.id}`} key={items.id}>
+              <Link to={`/property/${items.id}`} key={items.id}>
+                <div className='propertyCard'>
+                  
                     <div className='itemImgCon'>
                       <img src={items.img} alt={items.title} className=''/>
                       <p className='property_type'>{items.type}</p>
@@ -63,8 +64,9 @@ const HouseProperty = () => {
                         <p><CgNotes size={20} className="icon" />{items.land_size} sqft</p>
                       </div>
                     </div> 
-                  </Link>
+               
                 </div>
+              </Link>
             ))}
           </div>
       </main>

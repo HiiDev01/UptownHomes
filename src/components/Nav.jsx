@@ -6,7 +6,7 @@ import Logo from './Logo';
 const Nav = () => {
   const navItem = [
     {name: "houses", path: "/property/house"},
-    {name: "lands", path: "/property/lands"}
+    {name: "lands", path: "/property/Land"}
   ]
   return (
     <div className='nav'>
