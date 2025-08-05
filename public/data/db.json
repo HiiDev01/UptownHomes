@@ -10,7 +10,7 @@
       "baths": 5,
       "size": "3,200 sqft",
       "type": "For Sale",
-      "land_size": null,
+      "land_size": "1200 sqm" ,
       "images": ["/px1.jpg", "/px1-2.jpg"],
       "tags": [],
       "PropertyType": "House"
@@ -25,7 +25,7 @@
       "baths": 4,
       "size": "2,100 sqft",
       "type": "For Sale",
-      "land_size": null,
+      "land_size": "1200 sqm" ,
       "images": ["/px2.jpg", "/px2-2.jpg"],
       "tags": [],
       "propertyType": "House"

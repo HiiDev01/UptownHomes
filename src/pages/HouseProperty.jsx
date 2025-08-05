@@ -14,9 +14,11 @@ const HouseProperty = () => {
   const [properties, setProperties] = useState([]);
   const [error, setError] = useState(null);
  useEffect(()=>{
-  const fetchProperties = async()=>{
+  fetchProperties()
+ }, []);
+   const fetchProperties = async (query= " ")=>{
     try {
-      const res = await fetch(`http://localhost:4000/properties?type=${encodeURIComponent('For Sale')}`)
+      const res = await fetch(`http://localhost:4000/properties?${query}&type=${encodeURIComponent('For Sale')}`)
       if(!res.ok){throw new Error('can not fetch the endpoint')}
       const data = await res.json()
       setProperties(data);
@@ -25,9 +27,9 @@ const HouseProperty = () => {
       console.log(error)
       setError("Error fecthing properties")
     }
-  }
-  fetchProperties()
- }, [])
+  };
+
+
   return (
     <div className='house'>
       <Nav/>
@@ -38,7 +40,7 @@ const HouseProperty = () => {
             <p>Find the home that fits your lifestyle crafted from a <br></br>handpicked selection of properties.</p>
           </div>
         </div>
-        <Filter/>
+        <Filter onFilter={fetchProperties}/>
       </header>
       <main className='main'>
         <div className='propertCon'>

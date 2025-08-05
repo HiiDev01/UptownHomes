@@ -6,6 +6,7 @@ import { LuBath } from "react-icons/lu";
 import { CiLocationOn } from "react-icons/ci";
 import { FaArrowRight } from "react-icons/fa";
 import { FaArrowLeft } from "react-icons/fa";
+import { BsStars } from "react-icons/bs";
 import { CgNotes } from "react-icons/cg";
 import Nav from '../components/Nav';
 import '../pages/SingleProperty.css'
@@ -112,7 +113,7 @@ const SingleProperty = () => {
                             height: 40,
                             objectFit: 'cover',
                             marginRight: 4,
-                            border: idx === currentIdx ? '2px solid blue' : '1px solid #ccc',
+                            border: idx === currentIdx ? '2px solid var(--primary)' : '1px solid #ccc',
                             cursor: 'pointer',
                           }}
                         />
@@ -130,11 +131,41 @@ const SingleProperty = () => {
             </div>
           </div>
           <div className='wrapMainTwo'>
-            <div className="cardDet">
+            <div className="card">
               <h2>{item.title}</h2>
               <h4>{item.price_naira}</h4>
-              <p>{item.price_usd}</p>
-              if()
+              <p className='price'>{item.price_usd}</p>
+              <p className='locationP'><span><CiLocationOn size={20} className='icon'/></span>{item.location}</p>
+              <p className='type'>{item.type}</p>
+              <div className='cardDet'>
+                <div className='cardPara'>
+                  <IoBedOutline size={25} className="icon" /> 
+                  <div>
+                    <h3>Bedrooms</h3> 
+                    <p>{item.beds}</p>
+                  </div>
+                </div>
+                <div className='cardPara'>
+                  <LuBath size={25} className="icon" />
+                  <div>
+                    <h3>Bathrooms</h3>
+                    <p>{item.baths}</p>
+                  </div>
+                </div>
+                <div className='cardPara'>
+                  <CgNotes size={25} className="icon" />
+                  <div>
+                    <h3>Land Area</h3>
+                    <p>{item.land_size}</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div className="contactDet">
+              <h2><span><BsStars size={25} className='proStar'/></span> Porperty Agent</h2>
+              <p>Interested in this property? Contact our agent today for details, answers, or to arrange a viewing. Click “Contact Agent” to get started.</p>
+              <button>contact agent</button>
             </div>
           </div>
         </div>

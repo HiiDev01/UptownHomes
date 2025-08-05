@@ -1,25 +1,29 @@
 .singleProperty{
   width: 100%;
+  display: flex;
+  flex-direction: column;
 }
 .allCon{
   width: 100%;
   padding: 2%;
-  border: 2px solid red;
+  border: 1px solid black;
   display: flex;
   align-items: flex-start;
   gap: 20px;
+  background-color: var(--secondary);
 }
 .wrapMainOne{
   flex: 1;
-  border: 2px solid black;
   min-height: 100px;
 }
 .wrapOne{
   margin: 0px 0px 30px 0px;
 }
 .carousel{
-  border: 2px solid red;
+  background-color: var(--secondary);
   position: relative;
+  border-radius: 5px;
+  overflow: hidden;
 }
 .carousel-inner{
   width: 100%;
@@ -53,22 +57,151 @@
 .thumbnails{
   display: flex;
   align-items: center;
-  gap: 10px;
+  gap: 5px;
+  background-color: var(--light-sec);
 }
 .wrapTwo{
   width: 100%;
   border: 1px solid black;
   padding: 20px;
+  background-color: var(--main);
+  border-radius: 5px;
 }
-
+.wrapTwo h2{
+  font-family: var(--font-two);
+  font-size: 1.3rem;
+  font-weight: 600;
+  text-transform: capitalize;
+  margin: 0px 0px 10px 0px;
+}
+.wrapTwo p{
+  font-family: var(--font-two);
+  font-size: 1rem;
+  color: var(--light-text);
+}
 
 
 
 .wrapMainTwo{
   width: 30%;
-  border: 2px solid black;
+
   min-height: 100px;
 }
-.cardDet{
+.card{
   padding: 20px;
+  background-color: var(--main);
+  border-radius: 5px;
+  margin: 0px 0px 30px 0px;
+  box-shadow: 0px 1px 20px rgba(0, 0, 0, 0.15);
+}
+.card h2{
+  font-family: var(--font-two);
+  font-size: 1.3rem;
+  font-weight: 600;
+  text-transform: capitalize;
+  margin: 0px 0px 10px 0px;
+}
+.card h4{
+  font-family: var(--font-two);
+  font-size: 1rem;
+  font-weight: 500;
+  color: var(--light-text);
+  margin: 0px 0px 10px 0px;
+}
+.card .price{
+  font-family: var(--font-two);
+  color: var(--text);
+  font-weight: 600;
+  font-size: 1rem;
+  margin: 0px 0px 10px 0px;
+  text-transform: capitalize;
+}
+.card .locationP{
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: var(--light-text);
+  font-family: var(--font-two);
+  font-size: 1rem;
+  margin: 0px 0px 10px 0px;
+}
+.card .type{
+  display: inline-block;
+  padding: 5px 10px;
+  font-size: 0.9rem;
+  color: var(--main);
+  background-color: var(--primary);
+  font-family: var(--font-two);
+  text-transform: capitalize;
+  font-weight: 500;
+  margin: 0px 0px 15px 0px;
+  border-radius: 15px;
+}
+.cardDet{
+  width: 100%;
+}
+.cardPara{
+  font-family: var(--font-two);
+  color: var(--light-text);
+  font-weight: 400;
+  font-size: 1.1rem;
+  display: flex;
+  align-items: center;
+  height: auto;
+  gap: 15px;
+  margin: 0px 0px 5px 0px;
+}
+.cardPara > div{
+  margin: 0px 0px 10px 0px;
+}
+.cardPara > div > h3{
+  font-size: 1.1rem;
+  color: var(--text);
+  font-family: var(--font-two);
+  font-weight: 600;
+  margin: 0px 0px 5px 0px;
+  text-transform: capitalize;
+}
+
+.contactDet{
+  padding: 20px;
+  border-radius: 5px;
+  background-color: var(--main);
+  box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.15);
+}
+.contactDet h2{
+  font-size: 1.5rem;
+  color: var(--text);
+  text-transform: capitalize;
+  font-family: var(--font-two);
+  font-weight: 600;
+  margin: 0px 0px 10px 0px;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+.proStar{
+  color: gold;
+}
+.contactDet p{
+  font-family: var(--font-two);
+  color: var(--light-text);
+  font-size: 0.9rem;
+  font-weight: 300;
+  line-height: 1.4;
+  word-spacing: 1px;
+  word-wrap: normal;
+  margin: 0px 0px 10px 0px;
+}
+.contactDet button{
+  width: 100%;
+  padding: 12px 10px;
+  font-size: 1rem;
+  background-color: var(--primary);
+  color: var(--main);
+  border: none;
+  text-transform: capitalize;
+  font-weight: 500;
+  border-radius: 5px;
+  cursor: pointer;
 }
