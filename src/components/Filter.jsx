@@ -51,7 +51,7 @@ const Filter = ({onFilter}) => {
               <label htmlFor="location">location</label>
               <input 
                 type="text" 
-                id='location' 
+                id='locations' 
                 placeholder='e.g location or address' 
                 className='location'
                 value={location}
